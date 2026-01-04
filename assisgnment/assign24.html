@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pyramid Pattern</title>
+</head>
+<body>
+
+    <h2>Pyramid Pattern</h2>
+
+    <button onclick="printPyramid()">Show Pyramid</button>
+
+    <pre id="result"></pre>
+
+    <script>
+        function printPyramid() {
+            let rows = 5; // number of rows
+            let output = "";
+
+            for (let i = 1; i <= rows; i++) {
+                // print spaces
+                for (let j = 1; j <= rows - i; j++) {
+                    output += " ";
+                }
+                // print stars
+                for (let k = 1; k <= 2*i - 1; k++) {
+                    output += "*";
+                }
+                output += "\n"; // new line after each row
+            }
+
+            document.getElementById("result").innerText = output;
+        }
+    </script>
+
+</body>
+</html>

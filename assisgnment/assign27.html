@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Closest to 100</title>
+</head>
+<body>
+
+    <h2>Find Closest to 100</h2>
+
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+    <button onclick="closestTo100()">Check</button>
+
+    <p id="result"></p>
+
+    <script>
+        function closestTo100() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+
+            if (isNaN(a) || isNaN(b)) {
+                document.getElementById("result").innerText = "Please enter valid numbers.";
+                return;
+            }
+
+            let diffA = Math.abs(100 - a);
+            let diffB = Math.abs(100 - b);
+
+            let result = (diffA < diffB) ? a :
+                         (diffB < diffA) ? b : "Both are equally close";
+
+            document.getElementById("result").innerText =
+                "Closest to 100: " + result;
+        }
+    </script>
+
+</body>
+</html>

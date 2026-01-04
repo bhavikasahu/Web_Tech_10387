@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bhavika Sahu | AI/ML Specialist</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: linear-gradient(to right, #f5f9ff, #ffffff);
+            color: #0a2540;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0a2540, #133b6d);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 5px;
+            font-size: 36px;
+        }
+
+        header h3 {
+            font-weight: normal;
+            opacity: 0.9;
+        }
+
+        header a {
+            color: #cfe2ff;
+            text-decoration: none;
+            margin: 0 8px;
+            font-size: 14px;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            border-left: 5px solid #0a2540;
+            padding-left: 10px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+
+        .flex-container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .column {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        li:hover {
+            color: #133b6d;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0a2540;
+            color: white;
+        }
+
+        #topBtn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #0a2540;
+            color: white;
+            border: none;
+            padding: 12px 16px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            font-size: 14px;
+        }
+
+        #topBtn:hover {
+            background-color: #133b6d;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #e8f0ff;
+            color: #0a2540;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin: 5px 5px 0 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Bhavika Sahu</h1>
+    <h3>AI/ML Student</h3>
+    <p>
+        <a href="mailto:bhavikasahu3281@gmail.com">bhavikasahu3281@gmail.com</a> |
+        <span>Raipur, C.G</span>
+    </p>
+</header>
+
+<section>
+    <h2>About Me</h2>
+    <p>
+        Hello! I am <strong>Bhavika Sahu</strong>, a passionate learner and beginner web developer. I enjoy building simple, clean, and responsive websites using HTML, CSS, and JavaScript. I am continuously improving my technical and problem-solving skills.
+    </p>
+</section>
+
+<section>
+    <h2>Education</h2>
+    <ul>
+        <li><strong>B.Tech (CSE – AI & ML)</strong> – Rungta International Skills University</li>
+        <li><strong>12th standard</strong> - Athena World School</li>
+        <li><strong>10th standard</strong> - Kendriya Vidyalaya No.1</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Skills & Hobbies</h2>
+    <div class="flex-container">
+        <div class="column">
+            <h3>Skills</h3>
+            <span class="badge">PowerPoint</span>
+            <span class="badge">MS Excel</span>
+            <span class="badge">Analytical Thinking</span>
+            <span class="badge">Adaptability</span>
+        </div>
+
+        <div class="column">
+            <h3>Creative Hobbies</h3>
+            <span class="badge">Adobe Photoshop</span>
+            <span class="badge">Blender</span>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Projects & Achievements</h2>
+    <ul>
+        <li>Smart India Hackathon Participant</li>
+        <li>Developed a Math Puzzle Game using C Language</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Certificates</h2>
+    <ul>
+      <li>HTML, CSS and JavaScript Certification – IBM</li>
+      <li>Software Foundation Course with C Programming – IBMCEP</li>
+    </ul>
+</section>
+
+<footer>
+    <p>© 2026 Bhavika Sahu</p>
+</footer>
+
+<button id="topBtn" onclick="scrollToTop()">↑</button>
+
+<script>
+    window.onload = function () {
+        alert("Welcome to Bhavika Sahu's Portfolio");
+    };
+
+    window.onscroll = function () {
+        let btn = document.getElementById("topBtn");
+        if (document.documentElement.scrollTop > 200) {
+            btn.style.display = "block";
+        } else {
+            btn.style.display = "none";
+        }
+    };
+
+    function scrollToTop() {
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+
+</body>
+</html>

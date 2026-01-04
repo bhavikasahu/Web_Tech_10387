@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day of the Week</title>
+</head>
+<body>
+
+    <h2>Day of the Week Finder</h2>
+
+    <input type="number" id="day" placeholder="Enter number (1-7)">
+    <button onclick="findDay()">Find Day</button>
+
+    <p id="result"></p>
+
+    <script>
+        function findDay() {
+            let dayNumber = document.getElementById("day").value;
+
+            if (dayNumber === "") {
+                document.getElementById("result").innerText = "Please enter a number.";
+                return;
+            }
+
+            dayNumber = Number(dayNumber);
+            let dayName;
+
+            switch (dayNumber) {
+                case 1:
+                    dayName = "Monday";
+                    break;
+                case 2:
+                    dayName = "Tuesday";
+                    break;
+                case 3:
+                    dayName = "Wednesday";
+                    break;
+                case 4:
+                    dayName = "Thursday";
+                    break;
+                case 5:
+                    dayName = "Friday";
+                    break;
+                case 6:
+                    dayName = "Saturday";
+                    break;
+                case 7:
+                    dayName = "Sunday";
+                    break;
+                default:
+                    dayName = "Invalid input! Enter a number between 1 and 7.";
+            }
+
+            document.getElementById("result").innerText = dayName;
+        }
+    </script>
+
+</body>
+</html>

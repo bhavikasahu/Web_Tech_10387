@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sort Three Numbers</title>
+</head>
+<body>
+
+    <h2>Sort Three Numbers</h2>
+
+    <button onclick="sortNumbers()">Sort Numbers</button>
+
+    <script>
+        function sortNumbers() {
+            // Sample numbers
+            let a = 12;
+            let b = 5;
+            let c = 8;
+
+            let largest, middle, smallest;
+
+            // Determine largest
+            if (a >= b && a >= c) {
+                largest = a;
+                if (b >= c) {
+                    middle = b;
+                    smallest = c;
+                } else {
+                    middle = c;
+                    smallest = b;
+                }
+            } else if (b >= a && b >= c) {
+                largest = b;
+                if (a >= c) {
+                    middle = a;
+                    smallest = c;
+                } else {
+                    middle = c;
+                    smallest = a;
+                }
+            } else {
+                largest = c;
+                if (a >= b) {
+                    middle = a;
+                    smallest = b;
+                } else {
+                    middle = b;
+                    smallest = a;
+                }
+            }
+
+            alert("Sorted order: " + smallest + ", " + middle + ", " + largest);
+        }
+    </script>
+
+</body>
+</html>

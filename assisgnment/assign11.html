@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Discount Calculator</title>
+</head>
+<body>
+
+    <h2>Discount Calculator</h2>
+
+    <input type="number" id="amount" placeholder="Enter purchase amount">
+    <button onclick="calculateDiscount()">Calculate Discount</button>
+
+    <p id="result"></p>
+
+    <script>
+        function calculateDiscount() {
+            let amount = document.getElementById("amount").value;
+
+            if (amount === "" || amount < 0) {
+                document.getElementById("result").innerText = "Please enter a valid amount.";
+                return;
+            }
+
+            amount = Number(amount);
+            let discount;
+
+            if (amount >= 100) {
+                discount = 20;
+            } else if (amount >= 50) {
+                discount = 10;
+            } else {
+                discount = 0;
+            }
+
+            document.getElementById("result").innerText =
+                "Discount: " + discount + "%";
+        }
+    </script>
+
+</body>
+</html>

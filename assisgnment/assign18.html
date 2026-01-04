@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Iteration (for...of)</title>
+</head>
+<body>
+
+    <h2>Array Elements</h2>
+
+    <button onclick="printArray()">Print Elements</button>
+
+    <p id="result"></p>
+
+    <script>
+        function printArray() {
+            let fruits = ["Apple", "Banana", "Mango", "Orange"];
+            let output = "";
+
+            for (let item of fruits) {
+                output += item + "<br>";
+            }
+
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+
+</body>
+</html>

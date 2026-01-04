@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Neon Number Checker</title>
+</head>
+<body>
+
+    <h2>Neon Number Checker</h2>
+
+    <input type="number" id="num" placeholder="Enter a number">
+    <button onclick="checkNeon()">Check</button>
+
+    <p id="result"></p>
+
+    <script>
+        function checkNeon() {
+            let n = Number(document.getElementById("num").value);
+
+            if (isNaN(n) || n < 0) {
+                document.getElementById("result").innerText = "Please enter a valid non-negative number.";
+                return;
+            }
+
+            let square = n * n;
+            let sum = 0;
+
+            // Sum the digits of the square
+            let digits = String(square).split("").map(Number);
+            sum = digits.reduce((acc, val) => acc + val, 0);
+
+            let result = (sum === n) ? 
+                         n + " is a Neon Number" : 
+                         n + " is not a Neon Number";
+
+            document.getElementById("result").innerText = result;
+        }
+    </script>
+
+</body>
+</html>

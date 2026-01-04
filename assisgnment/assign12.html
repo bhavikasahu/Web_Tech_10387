@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Greeting Based on Time</title>
+</head>
+<body>
+
+    <h2>Greeting Program</h2>
+
+    <button onclick="greetUser()">Get Greeting</button>
+
+    <p id="result"></p>
+
+    <script>
+        function greetUser() {
+            let hour = new Date().getHours();
+            let greeting;
+
+            if (hour < 12) {
+                greeting = "Good Morning";
+            } else if (hour < 17) {
+                greeting = "Good Afternoon";
+            } else {
+                greeting = "Good Evening";
+            }
+
+            document.getElementById("result").innerText = greeting;
+        }
+    </script>
+
+</body>
+</html>

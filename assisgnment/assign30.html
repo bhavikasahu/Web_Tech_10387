@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buzz Number Checker</title>
+</head>
+<body>
+
+    <h2>Buzz Number Checker</h2>
+
+    <input type="number" id="num" placeholder="Enter a number">
+    <button onclick="checkBuzz()">Check</button>
+
+    <p id="result"></p>
+
+    <script>
+        function checkBuzz() {
+            let n = Number(document.getElementById("num").value);
+
+            if (isNaN(n)) {
+                document.getElementById("result").innerText = "Please enter a valid number.";
+                return;
+            }
+
+            // Check if divisible by 7 or last digit is 7
+            let isBuzz = (n % 7 === 0) || (n % 10 === 7);
+
+            document.getElementById("result").innerText =
+                isBuzz ? n + " is a Buzz Number" : n + " is not a Buzz Number";
+        }
+    </script>
+
+</body>
+</html>

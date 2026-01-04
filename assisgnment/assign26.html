@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sum or Triple Sum</title>
+</head>
+<body>
+
+    <h2>Sum or Triple Sum</h2>
+
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+    <button onclick="computeSum()">Compute</button>
+
+    <p id="result"></p>
+
+    <script>
+        function computeSum() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+
+            if (isNaN(a) || isNaN(b)) {
+                document.getElementById("result").innerText = "Please enter valid numbers.";
+                return;
+            }
+
+            let sum = a + b;
+            let result = (a === b) ? sum * 3 : sum;
+
+            document.getElementById("result").innerText =
+                "Result: " + result;
+        }
+    </script>
+
+</body>
+</html>

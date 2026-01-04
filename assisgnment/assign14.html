@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Guessing Game</title>
+</head>
+<body>
+
+    <h2>Number Guessing Game</h2>
+
+    <input type="number" id="guess" placeholder="Enter your guess">
+    <button onclick="checkGuess()">Check</button>
+
+    <p id="result"></p>
+
+    <script>
+        // Secret number
+        const secretNumber = 7;
+
+        function checkGuess() {
+            let guess = document.getElementById("guess").value;
+
+            if (guess === "") {
+                document.getElementById("result").innerText = "Please enter a number.";
+                return;
+            }
+
+            guess = Number(guess);
+
+            if (guess > secretNumber) {
+                document.getElementById("result").innerText = "Too high! Try a lower number.";
+            } else if (guess < secretNumber) {
+                document.getElementById("result").innerText = "Too low! Try a higher number.";
+            } else {
+                document.getElementById("result").innerText = "Correct! You guessed the number 🎉";
+            }
+        }
+    </script>
+
+</body>
+</html>

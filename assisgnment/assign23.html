@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3-Digit Armstrong Numbers</title>
+</head>
+<body>
+
+    <h2>3-Digit Armstrong Numbers</h2>
+
+    <button onclick="findArmstrong()">Find Armstrong Numbers</button>
+
+    <p id="result"></p>
+
+    <script>
+        function findArmstrong() {
+            let output = [];
+
+            for (let num = 100; num <= 999; num++) {
+                let digits = String(num).split("").map(Number); // get digits
+                let sumOfCubes = digits.reduce((sum, d) => sum + d**3, 0);
+
+                if (sumOfCubes === num) {
+                    output.push(num);
+                }
+            }
+
+            document.getElementById("result").innerText =
+                "3-Digit Armstrong Numbers: " + output.join(", ");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object Property Iteration</title>
+</head>
+<body>
+
+    <h2>Object Properties</h2>
+
+    <button onclick="printObject()">Print Properties</button>
+
+    <p id="result"></p>
+
+    <script>
+        function printObject() {
+            let student = {
+                name: "John",
+                age: 20,
+                course: "Computer Science"
+            };
+
+            let output = "";
+
+            for (let key in student) {
+                output += key + ": " + student[key] + "<br>";
+            }
+
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+
+</body>
+</html>
