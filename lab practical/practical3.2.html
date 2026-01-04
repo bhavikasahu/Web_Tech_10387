@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Conditionals & Loops Demo</title>
+</head>
+
+<body>
+    <h1>JavaScript: Conditional Statements and Loops</h1>
+    <p>Output in console bar.</p>
+
+    <script>
+        let number = 7;
+
+        console.log("Conditional Statements");
+
+        if (number > 10) {
+            console.log("Number is greater than 10");
+        } else if (number === 10) {
+            console.log("Number is exactly 10");
+        } else {
+            console.log("Number is less than 10");
+        }
+
+        // FOR LOOP
+        console.log("For Loop Output (1 to 5)");
+        for (let i = 1; i <= 5; i++) {
+            console.log(i);
+        }
+
+        // WHILE LOOP
+        console.log("While Loop Output (5 to 1)");
+        let count = 5;
+
+        while (count > 0) {
+            console.log(count);
+            count--;
+        }
+
+        // DO-WHILE LOOP
+        console.log("Do-While Loop Output");
+        let x = 0;
+
+        do {
+            console.log("Running x =", x);
+            x++;
+        } while (x < 3);
+    </script>
+</body>
+</html>
+

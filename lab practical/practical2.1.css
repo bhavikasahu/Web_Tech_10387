@@ -1,0 +1,15 @@
+/* External CSS */
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    color: teal;
+    text-align: center;
+}
+
+p.external {
+    color: darkred;
+    font-size: 18px;
+}

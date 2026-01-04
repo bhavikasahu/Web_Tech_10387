@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation with JavaScript</title>
+</head>
+
+<body>
+    <h2>Signup Form</h2>
+
+    <form id="myForm" onsubmit="return validateForm()">
+        <label>
+            Name:
+            <input type="text" id="name" oninput="clearError('nameError')">
+        </label>
+        <span id="nameError" class="error"></span>
+
+        <label>
+            Email:
+            <input type="text" id="email" oninput="clearError('emailError')">
+        </label>
+        <span id="emailError" class="error"></span>
+
+        <label>
+            Password:
+            <input type="password" id="password" oninput="clearError('passwordError')">
+        </label>
+        <span id="passwordError" class="error"></span>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function clearError(id) {
+            document.getElementById(id).textContent = "";
+        }
+
+        function validateForm() {
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let password = document.getElementById("password").value.trim();
+
+            let isValid = true;
+
+            if (name === "") {
+                document.getElementById("nameError").textContent = "Name is required.";
+                isValid = false;
+            }
+            if (email === "") {
+                document.getElementById("emailError").textContent = "Email is required.";
+                isValid = false;
+            } else if (!email.includes("@") || !email.includes(".")) {
+                document.getElementById("emailError").textContent = "Enter a valid email.";
+                isValid = false;
+            }
+
+            if (password.length < 6) {
+                document.getElementById("passwordError").textContent = "Password must be 6+ characters.";
+                isValid = false;
+            }
+
+            if (!isValid) {
+                alert("Form has errors. Please correct them.");
+                return false; 
+            }
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+
+</body>
+</html>

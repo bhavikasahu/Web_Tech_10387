@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Show / Hide & Toggle Class</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .box {
+      width: 200px;
+      padding: 15px;
+      margin-top: 10px;
+      background-color: lightblue;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .highlight {
+      background-color: yellow;
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 id="title">JavaScript DOM Demo</h2>
+
+  <button onclick="toggleBox()">Show / Hide Box</button>
+  <button onclick="toggleStyle()">Toggle Highlight</button>
+
+  <div id="myBox" class="box">
+    This box can be shown or hidden.
+  </div>
+
+  <script>
+    // Show / Hide element
+    function toggleBox() {
+      const box = document.getElementById("myBox");
+      box.classList.toggle("hidden");
+    }
+
+    // Toggle CSS class
+    function toggleStyle() {
+      const title = document.getElementById("title");
+      title.classList.toggle("highlight");
+    }
+  </script>
+
+</body>
+</html>

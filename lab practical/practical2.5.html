@@ -1,0 +1,82 @@
+<html>
+<head>
+    <title>Div and Span Layout Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 1rem;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+        header, footer {
+            background-color:green;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        main {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .card {
+            flex: 1 1 250px; 
+            background-color: #e0f7fa;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 2px solid #00acc1;
+        }
+        .highlight {
+            color: #ff5722;
+            font-weight: bold;
+            background-color: #fff3e0;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+        }
+        .badge {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.2rem 0.6rem;
+            font-size: 0.8rem;
+            border-radius: 4px;
+            margin-left: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Website Header</h1>
+        </header>
+        <main>
+            <div class="card">
+                <h2>Card 1 <span class="badge">New</span></h2>
+                <p>This is a <span class="highlight">highlighted text</span> inside a paragraph.</p>
+            </div>
+            <div class="card">
+                <h2>Card 2 <span class="badge">Hot</span></h2>
+                <p>Another card with <span class="highlight">inline span styling</span> example.</p>
+            </div>
+            <div class="card">
+                <h2>Card 3 <span class="badge">Info</span></h2>
+                <p>You can combine <span class="highlight">div and span</span> to structure content.</p>
+            </div>
+        </main>
+        <footer>
+            &copy; 2025 Website
+        </footer>
+    </div>
+</body>
+</html>
+ 

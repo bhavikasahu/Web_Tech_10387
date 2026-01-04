@@ -1,0 +1,77 @@
+<html>
+<head>
+    <title>CSS Selectors Demo</title>
+    <style>
+        /* 1. Universal Selector */
+        * {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 2. ID Selector */
+        #highlight {
+            background-color: yellow;
+            padding: 15px;
+            border: 2px solid orange;
+        }
+
+        /* 3. Class Selector */
+        .card {
+            background-color: #f0f8ff;
+            border: 2px solid #1e90ff;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        /* 4. Descendant Selector */
+        .container .inner p {
+            color: green;
+            font-style: italic;
+            padding: 10px;
+            border-left: 4px solid green;
+        }
+
+        /* 5. Group Selector */
+        h3, .group-example p {
+            color: purple;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Universal Selector Example -->
+    <h1>CSS Selectors Demonstration</h1>
+    
+    <!-- ID Selector Example -->
+    <div id="highlight">
+        <p>This paragraph is inside an element with ID "highlight".</p>
+    </div>
+
+    <!-- Class Selector Example -->
+    <div class="card">
+        <h2>Card Title</h2>
+        <p>This is a card using a class selector.</p>
+    </div>
+
+    <div class="card">
+        <h2>Another Card</h2>
+        <p>This card shares the same class style.</p>
+    </div>
+
+    <!-- Descendant Selector Example -->
+    <section class="container">
+        <div class="inner">
+            <p>This paragraph is targeted by a descendant selector: .container and .inner p</p>
+        </div>
+    </section>
+
+    <!-- Group Selector Example -->
+    <div class="group-example">
+        <h3>Heading 3 in Group Selector</h3>
+        <p>Paragraph in Group Selector</p>
+    </div>
+</body>
+</html>

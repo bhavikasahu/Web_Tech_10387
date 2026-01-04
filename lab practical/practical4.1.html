@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Manipulation Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    button {
+      padding: 8px 12px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="heading">Hello World</h1>
+  <p class="para">This is a paragraph.</p>
+  <button id="btn">Click Me</button>
+
+  <script>
+    // Using getElementById()
+    const heading = document.getElementById("heading");
+    heading.innerHTML = "DOM Manipulation Example";
+
+    // Using querySelector()
+    const paragraph = document.querySelector(".para");
+    paragraph.innerHTML = "This text was changed using querySelector().";
+
+    // Button click to change content dynamically
+    const button = document.getElementById("btn");
+
+    button.addEventListener("click", function () {
+      heading.innerHTML = "Button Clicked!";
+      paragraph.innerHTML = "Content updated using innerHTML 🎉";
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Functions & Scope Demo</title>
+</head>
+
+<body>
+    <h1>JavaScript: User-Defined Functions and Scope</h1>
+    <p>Output in console bar</p>
+
+    <script>
+        //no parameters
+        function greet() {
+            console.log("Hello from the greet() function!");
+        }
+
+        //parameters
+        function addNumbers(a, b) {
+            return a + b;
+        }
+
+        //block scope
+        function demonstrateScope() {
+            console.log("Inside demonstrateScope()");
+
+            var x = 10;  
+            let y = 20;   
+            const z = 30; 
+
+            console.log("var x:", x);
+            console.log("let y:", y);
+            console.log("const z:", z);
+
+            if (true) {
+                var x = 100; 
+                let y = 200;
+                const z = 300; 
+
+                console.log("Inside block - var x:", x);
+                console.log("Inside block - let y:", y);
+                console.log("Inside block - const z:", z);
+            }
+
+            console.log("Outside block - var x:", x);  
+            console.log("Outside block - let y:", y);  
+            console.log("Outside block - const z:", z); 
+        }
+
+        console.log("Invoking greet()");
+        greet();  
+
+        console.log("Invoking addNumbers()");
+        let sum = addNumbers(5, 7);
+        console.log("Sum of 5 and 7 is:", sum);
+
+        console.log("Invoking demonstrateScope()");
+        demonstrateScope();
+    </script>
+
+</body>
+</html>
